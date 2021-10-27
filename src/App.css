@@ -1,0 +1,174 @@
+
+
+*{
+
+  box-sizing: border-box;
+}
+h1,
+h4,
+h3
+{
+  color:var(--primar-color);
+  padding: 0.2rem;
+}
+h5{
+  color: #fff;
+}
+h6 {
+
+  font-weight:700;
+}
+Table {
+  color:var(--primar-color) !important;
+}
+.add-btn {
+  border-radius: 20px !important;
+  padding: 0.2rem 2rem 0.2rem 2rem;
+ 
+}
+.table-header {
+  margin-bottom: -2rem;
+}
+
+body {
+
+  overflow-x: hidden;
+  background: linear-gradient(180deg, #FFFFFF 58.85%);
+  font-family: 'Lato', sans-serif;
+}
+NavDropdown {
+  color: var(--primar-color) !important;
+}
+.dash-text {
+
+    font-size: 2rem;
+    color: var(--primar-color);
+   
+}
+span.dash-text
+{
+  margin: 2rem;
+
+}
+ul {
+  list-style: none;
+  padding: 2rem;
+  
+}
+
+ul >li {
+  color: #fff;
+ 
+ 
+
+ 
+}
+
+.profile {
+  background: #fff;
+   padding-left: 5rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  margin-top: 5rem;
+ 
+}
+.right-sidebar{
+
+  margin-left: 4rem;
+}
+.respo {
+  background: ;
+}
+
+ul li {
+ line-height: 3rem;
+ font-size: 1rem;
+ border-bottom: 0.1px solid gainsboro;
+
+}
+a , link{
+  text-decoration: none !important;
+  color:#fff;
+ }
+ ul>li:hover {
+  
+ }
+ a:hover{
+   color: black;
+ }
+
+.sidebar {
+ 
+  position: relative;
+  height: 100vh;
+  top: 0;
+  left:0;
+  bottom:0;
+  background-color:#2293C2 !important;
+  border-top-right-radius: 5% !important;
+
+}
+.footer {  background-color: #A4CBDB;
+}
+
+@media (max-width: 500px)  {
+  .respo{
+
+  width: 100rem;
+    
+  }
+
+}
+.leftimage{
+  height: 100%;
+  width: 100%;
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+@media (max-width: 768px) {
+  .leftimage{
+    display: none;
+  }
+}
+
+
+/* Joy */
+
+
+
+h1, h2, h3, h4, h5, p, span, strike{
+  font-family: 'Montserrat', sans-serif;
+}
+  
+.root {
+  min-height: 100%;
+
+  background: linear-gradient(
+    180deg,#FFFFFF 50.85%,#036F9D 100%
+  );
+
+}
+
+.buttons{
+  background-color: #036F9D !important;
+  border-radius: 10px !important;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+}
+
+.active{
+  color: #036F9D;
+}
+
+#div{
+  border-radius: 10px;
+
+  background: linear-gradient(
+    180deg,#FFFFFF 50.85%,#036F9D 100%
+  );
+  
+}
+
+

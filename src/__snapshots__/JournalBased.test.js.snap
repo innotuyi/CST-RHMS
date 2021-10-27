@@ -1,0 +1,172 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Journal Based Tests matches Snapshot Collectly 1`] = `
+<div
+  style={
+    Object {
+      "background": "linear-gradient(to bottom, white, 84%, #1089AF)",
+    }
+  }
+>
+  <Header />
+  <Container
+    fluid={false}
+  >
+    <Row
+      className="d-flex justify-content-center arighn-item-center"
+      noGutters={false}
+    >
+      <Col
+        className="d-flex justify-content-center"
+      >
+        <Jumbotron
+          fluid={false}
+          style={
+            Object {
+              "background": "linear-gradient(to bottom, white , 80%, #1089AF )",
+              "borderRadius": "10px",
+              "width": "90%",
+            }
+          }
+        >
+          <Form
+            className="form"
+            inline={false}
+            style={Object {}}
+          >
+            <h2
+              className="text-center mb-5 text-secondary"
+            >
+              Journal Based Research Information
+            </h2>
+            <FormGroup>
+              <FormLabel
+                column={false}
+                srOnly={false}
+              >
+                Conference name
+              </FormLabel>
+              <FormControl
+                placeholder="Enter The Name Of The Conference"
+                required={true}
+                type="text"
+              />
+            </FormGroup>
+            <FormGroup>
+              <FormLabel
+                column={false}
+                srOnly={false}
+              >
+                Conference Theme
+              </FormLabel>
+              <FormControl
+                placeholder="Enter Conference Theme "
+                required={true}
+                type="text"
+              />
+            </FormGroup>
+            <FormGroup>
+              <FormLabel
+                column={false}
+                srOnly={false}
+              >
+                Orgnizer's Name
+              </FormLabel>
+              <FormControl
+                placeholder="Enter Orgnizer's Name"
+                required={true}
+                type="text"
+              />
+            </FormGroup>
+            <Row
+              noGutters={false}
+            >
+              <Col>
+                <FormGroup
+                  controlId="dob"
+                >
+                  <FormLabel
+                    column={false}
+                    srOnly={false}
+                  >
+                    Select Conference Date
+                  </FormLabel>
+                  <FormControl
+                    name="dos"
+                    placeholder="Conference Date"
+                    type="date"
+                  />
+                </FormGroup>
+              </Col>
+              <Col>
+                <FormGroup>
+                  <FormLabel
+                    column={false}
+                    srOnly={false}
+                  >
+                     Place
+                  </FormLabel>
+                  <FormControl
+                    name="dos"
+                    placeholder="Enter Conference Location"
+                    type="text"
+                  />
+                </FormGroup>
+              </Col>
+            </Row>
+            <Row
+              noGutters={false}
+            >
+              <Col>
+                <FormGroup
+                  controlId=""
+                >
+                  <FormLabel
+                    column={false}
+                    srOnly={false}
+                  >
+                    Chapter Pages
+                  </FormLabel>
+                  <FormControl
+                    name=""
+                    placeholder="Enter The Number Of Pages"
+                    type="Number"
+                  />
+                </FormGroup>
+              </Col>
+              <Col>
+                <FormGroup>
+                  <FormLabel
+                    column={false}
+                    srOnly={false}
+                  >
+                    ISBN
+                  </FormLabel>
+                  <FormControl
+                    name=""
+                    placeholder="Enter ISBN"
+                    type="Number"
+                  />
+                </FormGroup>
+              </Col>
+            </Row>
+            <Col
+              className="text-center"
+            >
+              <Button
+                active={false}
+                className=""
+                disabled={false}
+                type="submit"
+                variant="primary"
+              >
+                Create
+              </Button>
+            </Col>
+          </Form>
+        </Jumbotron>
+      </Col>
+    </Row>
+  </Container>
+</div>
+`;

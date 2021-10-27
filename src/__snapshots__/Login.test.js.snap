@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login Tests matches Snapshot Collectly 1`] = `
+<div
+  style={
+    Object {
+      "background": "linear-gradient(to bottom, white, 84%, #1089AF)",
+      "height": "100vh",
+    }
+  }
+>
+  <Header />
+  <Container
+    fluid={false}
+  >
+    <Row
+      className="d-flex justify-content-center arighn-item-center"
+      noGutters={false}
+    >
+      <Col
+        className="leftimage"
+      >
+        <Image
+          fluid={false}
+          rounded={false}
+          roundedCircle={false}
+          src="Lecturesvg.svg"
+          style={
+            Object {
+              "height": "80%",
+              "objectFit": "contain",
+              "paddingTop": "80px",
+              "width": "80%",
+            }
+          }
+          thumbnail={false}
+        />
+      </Col>
+      <Col
+        className="d-flex justify-content-center"
+      >
+        <Jumbotron
+          fluid={false}
+          style={
+            Object {
+              "background": "linear-gradient(to bottom, white , 90%, #1089AF )",
+              "borderRadius": "10px",
+              "width": "100%",
+            }
+          }
+        >
+          <Form
+            className="form"
+            inline={false}
+            onSubmit={[Function]}
+            style={Object {}}
+          >
+            <h2
+              className="text-center mb-5 text-secondary"
+            >
+              Login Here
+            </h2>
+            <FormGroup>
+              <FormLabel
+                column={false}
+                srOnly={false}
+              >
+                Enter Your Email
+              </FormLabel>
+              <FormControl
+                id="email"
+                name="email"
+                onChange={[Function]}
+                placeholder="Your College Email"
+                required={true}
+                type="email"
+                value=""
+              />
+            </FormGroup>
+            <FormGroup>
+              <FormLabel
+                column={false}
+                srOnly={false}
+              >
+                Enter Your Password
+              </FormLabel>
+              <FormControl
+                id="password"
+                onChange={[Function]}
+                placeholder="Your Password"
+                required={true}
+                type="password"
+                value=""
+              />
+            </FormGroup>
+            <Col
+              className="text-center"
+            >
+              <Button
+                active={false}
+                className="lbutton"
+                disabled={false}
+                onClick={[Function]}
+                type="submit"
+                variant="primary"
+              >
+                Login
+              </Button>
+            </Col>
+          </Form>
+        </Jumbotron>
+      </Col>
+    </Row>
+  </Container>
+</div>
+`;

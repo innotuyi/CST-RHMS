@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Mentoship Tests matches Snapshot Collectly 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "background": "linear-gradient(to bottom, white, 84%, #1089AF)",
+      }
+    }
+  >
+    <Header />
+    <Container
+      fluid={false}
+    >
+      <Row
+        className="d-flex justify-content-center arighn-item-center"
+        noGutters={false}
+      >
+        <Col
+          className="leftimage"
+        >
+          <Image
+            fluid={false}
+            rounded={false}
+            roundedCircle={false}
+            src="Lecturesvg.svg"
+            style={
+              Object {
+                "height": "80%",
+                "objectFit": "contain",
+                "paddingTop": "80px",
+                "width": "80%",
+              }
+            }
+            thumbnail={false}
+          />
+        </Col>
+        <Col
+          className="d-flex justify-content-center"
+        >
+          <Jumbotron
+            fluid={false}
+            style={
+              Object {
+                "background": "linear-gradient(to bottom, white , 90%, #1089AF )",
+                "borderRadius": "10px",
+                "width": "100%",
+              }
+            }
+          >
+            <Form
+              className="form"
+              inline={false}
+              onSubmit={[Function]}
+              style={Object {}}
+            >
+              <h2
+                className="text-center mb-5 text-secondary"
+              >
+                Add A Suppervised Mentoship
+              </h2>
+              <FormGroup>
+                <FormLabel
+                  column={false}
+                  srOnly={false}
+                >
+                  Enter Student's Name
+                </FormLabel>
+                <FormControl
+                  id="name"
+                  onChange={[Function]}
+                  placeholder="Enter Student's Name"
+                  required={true}
+                  type="Text"
+                  value=""
+                />
+              </FormGroup>
+              <FormGroup>
+                <FormLabel
+                  column={false}
+                  srOnly={false}
+                >
+                  Enter The Project Title
+                </FormLabel>
+                <FormControl
+                  id="title"
+                  onChange={[Function]}
+                  placeholder="Enter The Project Title"
+                  required={true}
+                  type="Text"
+                  value=""
+                />
+              </FormGroup>
+              <FormGroup>
+                <FormLabel
+                  column={false}
+                  srOnly={false}
+                >
+                  Enter The Student's University
+                </FormLabel>
+                <FormControl
+                  id="university"
+                  onChange={[Function]}
+                  placeholder="Enter The Student's University"
+                  required={true}
+                  type="Text"
+                  value=""
+                />
+              </FormGroup>
+              <FormGroup
+                controlId="dob"
+              >
+                <FormLabel
+                  column={false}
+                  srOnly={false}
+                >
+                  Select The Date
+                </FormLabel>
+                <FormControl
+                  id="date"
+                  name="dos"
+                  onChange={[Function]}
+                  placeholder="Choose Date"
+                  type="date"
+                  value=""
+                />
+              </FormGroup>
+              <Col
+                className="text-center"
+              >
+                <Button
+                  active={false}
+                  className=""
+                  disabled={false}
+                  type="submit"
+                  variant="primary"
+                >
+                  Submit
+                </Button>
+              </Col>
+            </Form>
+          </Jumbotron>
+        </Col>
+      </Row>
+    </Container>
+  </div>
+</div>
+`;

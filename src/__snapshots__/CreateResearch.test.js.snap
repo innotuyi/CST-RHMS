@@ -1,0 +1,174 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Create Research Tests matches Snapshot Collectly 1`] = `
+<div
+  style={
+    Object {
+      "background": "linear-gradient(to bottom, white, 84%, #1089AF)",
+      "height": "100vh",
+    }
+  }
+>
+  <Header />
+  <Container
+    fluid={false}
+  >
+    <Row
+      className="d-flex justify-content-center arighn-item-center"
+      noGutters={false}
+    >
+      <Col
+        className="d-flex justify-content-center"
+      >
+        <Jumbotron
+          fluid={false}
+          style={
+            Object {
+              "background": "linear-gradient(to bottom, white , 90%, #1089AF )",
+              "borderRadius": "10px",
+              "width": "90%",
+            }
+          }
+        >
+          <Form
+            className="form"
+            inline={false}
+            onSubmit={[Function]}
+            style={Object {}}
+          >
+            <h2
+              className="text-center mb-5 text-secondary"
+            >
+              Create New Research
+            </h2>
+            <FormGroup>
+              <FormLabel
+                column={false}
+                srOnly={false}
+              >
+                Title
+              </FormLabel>
+              <FormControl
+                id="title"
+                onChange={[Function]}
+                placeholder="Enter Research Title"
+                required={true}
+                type="text"
+                value=""
+              />
+            </FormGroup>
+            <Row
+              noGutters={false}
+            >
+              <Col>
+                <FormGroup
+                  controlId="dob"
+                >
+                  <FormLabel
+                    column={false}
+                    srOnly={false}
+                  >
+                    Select Starting Date
+                  </FormLabel>
+                  <FormControl
+                    id="startdate"
+                    name="dos"
+                    onChange={[Function]}
+                    placeholder="Starting Date"
+                    required={true}
+                    type="date"
+                    value=""
+                  />
+                </FormGroup>
+              </Col>
+              <Col>
+                <FormGroup>
+                  <FormLabel
+                    column={false}
+                    srOnly={false}
+                  >
+                    Select Ending Date
+                  </FormLabel>
+                  <FormControl
+                    id="endingdate"
+                    name="dos"
+                    onChange={[Function]}
+                    placeholder="Ending Date"
+                    required={true}
+                    type="date"
+                    value=""
+                  />
+                </FormGroup>
+              </Col>
+            </Row>
+            <FormGroup>
+              <FormLabel
+                column={false}
+                srOnly={false}
+              >
+                Amount
+              </FormLabel>
+              <FormControl
+                id="amount"
+                onChange={[Function]}
+                placeholder="Enter Research Amount"
+                required={true}
+                type="number"
+                value=""
+              />
+            </FormGroup>
+            <FormGroup
+              controlId=""
+            >
+              <FormLabel
+                column={false}
+                srOnly={false}
+              >
+                Select Research Type
+              </FormLabel>
+              <FormControl
+                as="select"
+                defaultValue="Select Research Type ..."
+                id="type"
+                onChange={[Function]}
+                required={true}
+                value=""
+              >
+                <option>
+                  Select Research Type...
+                </option>
+                <option>
+                  Jounal Based Research
+                </option>
+                <option>
+                  Conference Based Research
+                </option>
+                <option>
+                  Book Based Research
+                </option>
+                <option>
+                  Chapter Based Research
+                </option>
+                <option />
+              </FormControl>
+            </FormGroup>
+            <Col
+              className="text-center"
+            >
+              <Button
+                active={false}
+                className=""
+                disabled={false}
+                type="submit"
+                variant="primary"
+              >
+                Create Research
+              </Button>
+            </Col>
+          </Form>
+        </Jumbotron>
+      </Col>
+    </Row>
+  </Container>
+</div>
+`;

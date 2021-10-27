@@ -1,0 +1,1 @@
+ export const staffData = [{"firstname":"Alexia","lastname":"Sawdy","gender":"F","specialized":"Legal","school":"George Washington University","departement":"Marketing","appointment":"3/2/2021","promotion_date":"5/22/2021","training":"Occlusion of Left Cephalic Vein, Perc Endo Approach","responsibilities":"Car passenger injured in collision w hv veh nontraf, sequela"}]

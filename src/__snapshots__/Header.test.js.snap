@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Tests matches Snapshot Collectly 1`] = `
+<Navbar
+  bg="white"
+  className="shadow-sm mb-5 bg-white rounded"
+  collapseOnSelect={true}
+  expand="lg"
+  sticky="top"
+  variant="light"
+>
+  <NavbarBrand
+    href="/"
+  >
+    <img
+      alt=""
+      height="80px"
+      object-fit="contain"
+      src="https://registration.ur.ac.rw/partnership/sites/default/files/UR%20LOGO%20FOR%20REGISTRATION%20SITE.JPG"
+    />
+  </NavbarBrand>
+  <NavbarToggle
+    aria-controls="responsive-navbar-nav"
+    label="Toggle navigation"
+  />
+  <NavbarCollapse
+    id="responsive-navbar-nav"
+  >
+    <Nav
+      className="ml-auto mr-5"
+      fill={false}
+      justify={false}
+    >
+      <Link
+        className="nav-link"
+        to="/login"
+      >
+        Login
+      </Link>
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "render": [Function],
+          }
+        }
+        disabled={false}
+        e={true}
+        href=""
+      >
+        SignUp
+      </NavLink>
+    </Nav>
+  </NavbarCollapse>
+</Navbar>
+`;
