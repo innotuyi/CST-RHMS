@@ -17,8 +17,8 @@ function CreateResearch() {
 
  
   const [title, setTitle] = useState("");
-  // const [startDate, setStartDate] = useState("");
-  // const [endingDate, setEndingDate] = useState("");
+  const [startDate, setStartDate] = useState("");
+  const [endingDate, setEndingDate] = useState("");
   const [amount, setAmount] = useState("");
   const [status, setStatus] = useState("");
   const [type, setType] = useState("");
@@ -29,8 +29,8 @@ function CreateResearch() {
     if(type=="Chapter") {
       const payload = {
         'research_title': title, 
-         //  'starting_date': setStartDate,
-         //  'ending_date':endingDate, 
+        'starting_date': setStartDate,
+        'ending_date':endingDate, 
          'amount':amount,
          'status':status,
          // 'date_created':dateCreated,
@@ -50,8 +50,8 @@ history.push('/chapterbased');
     else if(type=="Conference") {
       const payload = {
         'research_title': title, 
-         //  'starting_date': setStartDate,
-         //  'ending_date':endingDate, 
+          'starting_date': setStartDate,
+          'ending_date':endingDate, 
          'amount':amount,
          'status':status,
          // 'date_created':dateCreated,
@@ -70,8 +70,8 @@ console.log('Error response: ', error);
     else if(type=="Book") {
       const payload = {
         'research_title': title, 
-         //  'starting_date': setStartDate,
-         //  'ending_date':endingDate, 
+          'starting_date': setStartDate,
+          'ending_date':endingDate, 
          'amount':amount,
          'status':status,
          // 'date_created':dateCreated,
@@ -92,8 +92,8 @@ console.log('Error response: ', error);
     else if(type=="Jounal") {
       const payload = {
         'research_title': title, 
-         //  'starting_date': setStartDate,
-         //  'ending_date':endingDate, 
+          'starting_date': setStartDate,
+          'ending_date':endingDate, 
          'amount':amount,
          'status':status,
          // 'date_created':dateCreated,
@@ -151,7 +151,7 @@ console.log('Error response: ', error);
                     placeholder="Enter Research Title"
                   />
                 </Form.Group>
-                {/* <Row>
+                <Row>
                   <Col>
                     <Form.Group controlId="dob">
                       <Form.Label>Select Starting Date</Form.Label>
@@ -180,19 +180,35 @@ console.log('Error response: ', error);
                       />
                     </Form.Group>
                   </Col>
-                </Row> */}
+                </Row>
                  <Form.Group>
-                  <Form.Label>Amount</Form.Label>
+                  <Form.Label>Project Description</Form.Label>
                   <Form.Control
                     required
-                    type="number"
+                    type="text"
                     id="amount"
                     value={amount}
                     onChange={(e) => setAmount(e.target.value)}
-                    placeholder="Enter Research Amount"
+                    placeholder="Enter  Project Description"
                   />
                 </Form.Group>
-                <Form.Group>
+                <Form.Group controlId="">
+                  <Form.Label>Select Research Status</Form.Label>
+                  <Form.Control
+                    as="select"
+                    required
+                    id="status"
+                    value={status}
+                    onChange={(e) => setStatus(e.target.value)}
+                    
+                  >
+                   
+                    <option value="ongoing">Ongoing</option>
+                    <option value="Completed">Completed</option>
+                   
+                  </Form.Control>
+                </Form.Group>
+                {/* <Form.Group>
                   <Form.Label>Status</Form.Label>
                   <Form.Control
                     required
@@ -202,7 +218,7 @@ console.log('Error response: ', error);
                     onChange={(e) => setStatus(e.target.value)}
                     placeholder="Enter Research status"
                   />
-                </Form.Group>
+                </Form.Group> */}
 
                 
 {/* 
@@ -223,16 +239,15 @@ console.log('Error response: ', error);
                   </Col>
                 </Row> */}
                 <Form.Group controlId="">
-                  <Form.Label>Select Research Type</Form.Label>
+                  <Form.Label>Select Research Expected Outcome</Form.Label>
                   <Form.Control
                     as="select"
                     required
                     id="type"
                     value={type}
                     onChange={(e) => setType(e.target.value)}
-                    defaultValue="Select Research Type ..."
+                   
                   >
-                    <option>Select Research Type...</option>
                     <option value="Jounal">Jounal Based Research</option>
                     <option value="Conference">Conference Based Research</option>
                     <option value="Book">Book Based Research</option>
