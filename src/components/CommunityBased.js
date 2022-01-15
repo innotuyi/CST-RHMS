@@ -15,12 +15,12 @@ import {
 } from "react-bootstrap";
 let token = localStorage.getItem("token");
 
-function Mentoship() {
+function CommunityBased() {
   const history = useHistory();
 
   const [name, setName] = useState("");
-  const [level, setLevel] = useState("");
   const [title, setTitle] = useState("");
+  const [plan, setPlan] = useState("");
   const [university, setUniversity] = useState("");
   const [school, setSchool] = useState("");
   const [depart, setDepart] = useState("");
@@ -28,24 +28,23 @@ function Mentoship() {
   const mentoHandler = (e) => {
     e.preventDefault();
     const payload = {
-      staff_or_student_mentored: name,
-      level: level,
-      studentsprojectTitle: title,
-      university:university,
-      school_name:school,
-      departement:depart
-
+      specializedArea: name,
+      communityActivity: title,
+      outputInCommunity: university,
+      planforCommunityEngagement: plan,
+      school_name: school,
+      departement: depart,
     };
 
     axios
-      .post("http://127.0.0.1:8000/researches/mentorship/", payload, {
+      .post("http://127.0.0.1:8000/researches/community/", payload, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       })
       .then(function (response) {
         console.log("Successful response: ", response);
-        history.push("/Mentorship");
+        history.push("/Community");
       })
       .catch(function (error) {
         console.log("Error response: ", error);
@@ -83,56 +82,50 @@ function Mentoship() {
               >
                 <Form className="form" style={{}} onSubmit={mentoHandler}>
                   <h2 className="text-center mb-5 text-secondary">
-                    Add A Suppervised Mentoship
+                    Add A Community Information
                   </h2>
                   <Form.Group>
-                    <Form.Label>Enter Student's Name</Form.Label>
+                    <Form.Label>Specialized Area</Form.Label>
                     <Form.Control
                       required
                       type="Text"
                       id="name"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      placeholder="Enter Student's Name"
+                      placeholder="Specialized Area"
                     />
                   </Form.Group>
-
-                  <Form.Group controlId="">
-                    <Form.Label>Level Name</Form.Label>
-                    <Form.Control
-                      as="select"
-                      required
-                      id="level"
-                      value={level}
-                      onChange={(e) => setLevel(e.target.value)}
-                    >
-                      <option>Select Level</option>
-                      <option>Masters</option>
-                      <option>Bacheros</option>
-                      <option>PhD</option>
-                    </Form.Control>
-                  </Form.Group>
-
                   <Form.Group>
-                    <Form.Label>Enter The Project Title</Form.Label>
+                    <Form.Label>Community Activity</Form.Label>
                     <Form.Control
                       required
                       type="Text"
-                      placeholder="Enter The Project Title"
+                      placeholder="Community Activity"
                       id="title"
                       value={title}
                       onChange={(e) => setTitle(e.target.value)}
                     />
                   </Form.Group>
                   <Form.Group>
-                    <Form.Label>Enter The Student's University</Form.Label>
+                    <Form.Label>Output In Community</Form.Label>
                     <Form.Control
                       required
                       type="Text"
-                      placeholder="Enter The Student's University"
+                      placeholder="Output In Community"
                       id="university"
                       value={university}
                       onChange={(e) => setUniversity(e.target.value)}
+                    />
+                  </Form.Group>
+                  <Form.Group>
+                    <Form.Label>Plan For Community Engagement</Form.Label>
+                    <Form.Control
+                      required
+                      type="Text"
+                      placeholder="Plan For Community Engagement"
+                      id="plan"
+                      value={plan}
+                      onChange={(e) => setPlan(e.target.value)}
                     />
                   </Form.Group>
                   <Row>
@@ -163,24 +156,24 @@ function Mentoship() {
                     </Col>
 
                     <Col>
-                    <Form.Group controlId="">
-                      <Form.Label>Department Name</Form.Label>
-                      <Form.Control
-                        as="select"
-                        required
-                        id="depart"
-                        value={depart}
-                        onChange={(e) => setDepart(e.target.value)}
-                      >
-                        <option>Select Department</option>
-                        <option>Departement of Computer Science</option>
-                        <option>Departement of Information System</option>
-                        <option>Departement of Information Technology</option>
-                        <option>Department of Architecture</option>
-                        <option>Department of Construction Management</option>
-                      </Form.Control>
-                    </Form.Group>
-                  </Col>
+                      <Form.Group controlId="">
+                        <Form.Label>Department Name</Form.Label>
+                        <Form.Control
+                          as="select"
+                          required
+                          id="depart"
+                          value={depart}
+                          onChange={(e) => setDepart(e.target.value)}
+                        >
+                          <option>Select Department</option>
+                          <option>Departement of Computer Science</option>
+                          <option>Departement of Information System</option>
+                          <option>Departement of Information Technology</option>
+                          <option>Department of Architecture</option>
+                          <option>Department of Construction Management</option>
+                        </Form.Control>
+                      </Form.Group>
+                    </Col>
                   </Row>
                   <Col className="text-center">
                     <Button className="" type="submit">
@@ -197,4 +190,4 @@ function Mentoship() {
   );
 }
 
-export default Mentoship;
+export default CommunityBased;

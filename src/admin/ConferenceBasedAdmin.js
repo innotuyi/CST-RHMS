@@ -4,19 +4,22 @@ import HeaderDashborad from "../components/HeaderDashborad";
 import { Link, useHistory } from "react-router-dom";
 import Menu from "../components/Menu";
 import axios from "axios";
+
 import AdminDashboard from "../screen/AdminDashboard";
-const CommunityAdmin = () => {
+
+const ConferenceBasedAdmin = () => {
   const history = useHistory();
   let token = localStorage.getItem("token");
   const [products, setProduct] = useState([]);
+
   const showEditForm = (id) => {
-    history.push(`/EditCommunityAdmin/${id}/`);
+    history.push(`/EditConferenceAdmin/${id}/`);
   };
 
   useEffect(() => {
     async function fetchProducts() {
       const { data } = await axios.get(
-        `http://127.0.0.1:8000/admin-statistic/all-community-engagment-activity/`,
+        `http://127.0.0.1:8000/admin-statistic/all-research-conferance/`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -27,7 +30,6 @@ const CommunityAdmin = () => {
     }
     fetchProducts();
   }, []);
-
   return (
     <div>
       <Menu />
@@ -35,20 +37,25 @@ const CommunityAdmin = () => {
         <AdminDashboard />
         <Col md={8}>
           <div className="text-right m-3">
-            <h4 className="table-header text-left">Community Engangement</h4>
-            <Button className="btn-primary text-right add-btn">Export</Button>
+            <h4 className="table-header text-left">Conference Based</h4>
+            <Button className="btn-primary text-right add-btn">export</Button>
           </div>
 
           <Table hover>
             <thead>
               <tr>
                 <th>#</th>
-                <th>Specialization Area</th>
-                <th>Community Activity</th>
-                {/* <th>Output In community</th>
-       <th>Plan for Community Engagment</th>
-       <th>School</th>
-       <th>Department</th> */}
+                <th>Name</th>
+                {/* <th>Author</th>
+                    <th>Publication Year</th>
+                    <th>Theme</th>
+                      <th>Organizer</th>
+                    <th>Place</th>
+                    <th>Editor</th> 
+                     <th>Number Of Pages</th>
+                    <th>ISBN</th>
+                    <th>School</th>
+                    <th>Department</th> */}
                 <th>Comment</th>
                 <th>Staff</th>
               </tr>
@@ -56,19 +63,21 @@ const CommunityAdmin = () => {
             <tbody>
               {products.map((product) => (
                 <tr>
-                  <td>{product.engagementId}</td>
-                  <td>{product.specializedArea}</td>
-
-                  <td>{product.communityActivity}</td>
-
-                  {/* <td>{product.outputInCommunity}</td>
-   
-       <td>{product.planforCommunityEngagement}</td>
-   
-       <td>{product.school_name}</td>    
-       <td>{product.departement}</td>  */}
-                  <td>{product.comment}</td>
+                  <td>{product.confer_id}</td>
+                  <td>{product.confer_name}</td>
+                  {/* <td>{product.author}</td> 
+                       <td>{product.date_of_publication}</td> 
+                      <td>{product.theme}</td>
+                      <td>{product.organizer}</td>
+                      <td>{product.place}</td>
+                      <td>{product.editor}</td>
+                      <td>{product.no_of_pages}</td>
+                      <td>{product.isbn}</td>
+                      <td>{product.school_name}</td>
+                      <td>{product.departement}</td> */}
                   <td>{product.staff}</td>
+                  <td>{product.comment}</td>
+
                   <td>
                     <link
                       rel="stylesheet"
@@ -77,7 +86,7 @@ const CommunityAdmin = () => {
                     <Button
                       variant="dark"
                       id="printPageButton"
-                      onClick={(e) => showEditForm(product.engagementId)}
+                      onClick={(e) => showEditForm(product.confer_id)}
                     >
                       <i className="fa fa-pencil"></i>
                     </Button>
@@ -91,4 +100,5 @@ const CommunityAdmin = () => {
     </div>
   );
 };
-export default CommunityAdmin;
+
+export default ConferenceBasedAdmin;
