@@ -21,7 +21,7 @@ function Research() {
         .delete(`http://127.0.0.1:8000/researches/research-project/${id}/`, {
           headers: {
             Authorization: `Bearer ${token}`,
-          }
+          },
         })
         .then((res) => {
           ToastsStore.warning("Successfully Deleted!");
@@ -44,10 +44,11 @@ function Research() {
   useEffect(() => {
     async function fetchProducts() {
       const { data } = await axios.get(
-        "http://127.0.0.1:8000/researches/research-project/",{
+        "http://127.0.0.1:8000/researches/research-project/",
+        {
           headers: {
-            'Authorization': `Bearer ${token}` 
-          }
+            Authorization: `Bearer ${token}`,
+          },
         }
       );
       console.log(token);
@@ -95,7 +96,16 @@ function Research() {
               {researches.map((research) => (
                 <tr>
                   <td>{research.id}</td>
-                  <td>{research.research_title}</td>
+                  <td>
+                    <Link
+                      to={`/SingleResearch/${research.id}`}
+                      style={{
+                        color: "black",
+                      }}
+                    >
+                      {research.research_title}
+                    </Link>{" "}
+                  </td>
                   {/* <td>{research.starting_date}</td>
                   <td>{research.ending_date}</td> */}
                   {/* <td>{research.funding_amount}</td>
@@ -113,7 +123,7 @@ function Research() {
                       <i className="fa fa-pencil"></i>
                     </Button>
                   </td>
-                  <td>
+                  {/* <td>
                     <link
                       rel="stylesheet"
                       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -125,7 +135,7 @@ function Research() {
                     >
                       <i class="fa fa-eye"></i>
                     </Button>
-                  </td>
+                  </td> */}
                   <td>
                     <link
                       rel="stylesheet"
