@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Col, Button, Table, Row } from "react-bootstrap";
 import HeaderDashborad from "../components/HeaderDashborad";
-import { Bar, Line, Pie } from "react-chartjs-2";
+// import { Bar, Line, Pie } from "react-chartjs-2";
 import {} from "@fortawesome/fontawesome-free-solid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
@@ -293,10 +293,10 @@ const DashboardAdm = () => {
 
           <div class="row">
             <div class="col-md-6 justify-content-center text-center">
-              <Bar data={state} options={options} />
+              {/* <Bar data={state} options={options} /> */}
             </div>
             <div class="col-md-6 justify-content-center text-center">
-              <Line data={state} options={options} />
+              {/* <Line data={state} options={options} /> */}
             </div>
           </div>
         </Col>
